@@ -2,13 +2,6 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-/*display all*/
-
-projects.display();
-bio.display();
-work.display();
-education.display();
-
 /*bio section*/
 var bio = {
     "name": "Adimas Lutfi Wicaksono",
@@ -164,6 +157,13 @@ var education = {
 
     }
 };
+
+/*display all*/
+
+projects.display();
+bio.display();
+work.display();
+education.display();
 
 $('#mapDiv').append(googleMap);
 
