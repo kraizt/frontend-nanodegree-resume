@@ -2,6 +2,9 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
+/*easy data replacement*/
+var data = "%data%";
+
 /*bio section*/
 var bio = {
     "name": "Adimas Lutfi Wicaksono",
@@ -24,21 +27,21 @@ var bio = {
     ],
     "biopic": "images/fry.jpg",
     "display": function() {
-        displayGeneric(HTMLheaderRole, "%data%", bio.role, "#header", "prepend");
-        displayGeneric(HTMLheaderName, "%data%", bio.name, "#header", "prepend");
+        displayGeneric(HTMLheaderRole, data, bio.role, "#header", "prepend");
+        displayGeneric(HTMLheaderName, data, bio.name, "#header", "prepend");
 
-        displayGeneric(HTMLmobile, "%data%", bio.contacts.mobile, "#topContacts, #footerContacts");
-        displayGeneric(HTMLemail, "%data%", bio.contacts.email, "#topContacts, #footerContacts");
-        displayGeneric(HTMLtwitter, "%data%", bio.contacts.twitter, "#topContacts, #footerContacts");
-        displayGeneric(HTMLgithub, "%data%", bio.contacts.github, "#topContacts, #footerContacts");
-        displayGeneric(HTMLblog, "%data%", bio.contacts.blog, "#topContacts, #footerContacts");
-        displayGeneric(HTMLlocation, "%data%", bio.contacts.location, "#topContacts, #footerContacts");
-        displayGeneric(HTMLbioPic, "%data%", bio.biopic, "#header");
-        displayGeneric(HTMLwelcomeMsg, "%data%", bio.welcomeMessage, "#header");
+        displayGeneric(HTMLmobile, data, bio.contacts.mobile, "#topContacts, #footerContacts");
+        displayGeneric(HTMLemail, data, bio.contacts.email, "#topContacts, #footerContacts");
+        displayGeneric(HTMLtwitter, data, bio.contacts.twitter, "#topContacts, #footerContacts");
+        displayGeneric(HTMLgithub, data, bio.contacts.github, "#topContacts, #footerContacts");
+        displayGeneric(HTMLblog, data, bio.contacts.blog, "#topContacts, #footerContacts");
+        displayGeneric(HTMLlocation, data, bio.contacts.location, "#topContacts, #footerContacts");
+        displayGeneric(HTMLbioPic, data, bio.biopic, "#header");
+        displayGeneric(HTMLwelcomeMsg, data, bio.welcomeMessage, "#header");
 
         $('#header').append(HTMLskillsStart);
         bio.skills.forEach(function(skills) {
-            displayGeneric(HTMLskills, "%data%", skills, "#skills");
+            displayGeneric(HTMLskills, data, skills, "#skills");
         });
     }
 };
@@ -65,11 +68,11 @@ var work = {
         });
 
         function displayWork(employer, title, dates, location, description) {
-            displayGeneric(HTMLworkEmployer, "%data%", employer, ".work-entry");
-            displayGeneric(HTMLworkTitle, "%data%", title, ".work-entry");
-            displayGeneric(HTMLworkLocation, "%data%", dates, ".work-entry");
-            displayGeneric(HTMLworkLocation, "%data%", location, ".work-entry");
-            displayGeneric(HTMLworkDescription, "%data%", description, ".work-entry");
+            displayGeneric(HTMLworkEmployer, data, employer, ".work-entry");
+            displayGeneric(HTMLworkTitle, data, title, ".work-entry");
+            displayGeneric(HTMLworkLocation, data, dates, ".work-entry");
+            displayGeneric(HTMLworkLocation, data, location, ".work-entry");
+            displayGeneric(HTMLworkDescription, data, description, ".work-entry");
         }
     }
 };
@@ -89,14 +92,14 @@ var projects = {
         projects.projects.forEach(function(project) {
             displayProject(project.title, project.dates, project.description);
             project.images.forEach(function(images) {
-                displayGeneric(HTMLprojectImage, "%data%", images, ".project-entry");
+                displayGeneric(HTMLprojectImage, data, images, ".project-entry");
             });
         });
 
         function displayProject(title, dates, description) {
-            displayGeneric(HTMLprojectTitle, "%data%", title, ".project-entry");
-            displayGeneric(HTMLprojectDates, "%data%", dates, ".project-entry");
-            displayGeneric(HTMLprojectDescription, "%data%", description, ".project-entry");
+            displayGeneric(HTMLprojectTitle, data, title, ".project-entry");
+            displayGeneric(HTMLprojectDates, data, dates, ".project-entry");
+            displayGeneric(HTMLprojectDescription, data, description, ".project-entry");
         }
     }
 
@@ -130,12 +133,12 @@ var education = {
         $('#education').append(HTMLschoolStart);
 
         function displaySchools(name, location, degree, majors, date, url) {
-            displayGeneric(HTMLschoolName, "%data%", name, ".education-entry");
-            displayGeneric(HTMLschoolDegree, "%data%", degree, ".education-entry");
-            displayGeneric(HTMLschoolDates, "%data%", date, ".education-entry");
-            displayGeneric(HTMLschoolMajor, "%data%", majors, ".education-entry");
-            displayGeneric(HTMLschoolLocation, "%data%", location, ".education-entry");
-            displayGeneric(HTMLonlineURL, "%data%", url, ".education-entry");
+            displayGeneric(HTMLschoolName, data, name, ".education-entry");
+            displayGeneric(HTMLschoolDegree, data, degree, ".education-entry");
+            displayGeneric(HTMLschoolDates, data, date, ".education-entry");
+            displayGeneric(HTMLschoolMajor, data, majors, ".education-entry");
+            displayGeneric(HTMLschoolLocation, data, location, ".education-entry");
+            displayGeneric(HTMLonlineURL, data, url, ".education-entry");
         }
 
         education.schools.forEach(function(schools) {
@@ -145,10 +148,10 @@ var education = {
         $('.education-entry').append(HTMLonlineClasses);
 
         function displayOnlineClass(title, school, dates, address) {
-            displayGeneric(HTMLonlineTitle, "%data%", title, ".education-entry");
-            displayGeneric(HTMLonlineSchool, "%data%", school, ".education-entry");
-            displayGeneric(HTMLonlineDates, "%data%", dates, ".education-entry");
-            displayGeneric(HTMLonlineURL, "%data%", address, ".education-entry");
+            displayGeneric(HTMLonlineTitle, data, title, ".education-entry");
+            displayGeneric(HTMLonlineSchool, data, school, ".education-entry");
+            displayGeneric(HTMLonlineDates, data, dates, ".education-entry");
+            displayGeneric(HTMLonlineURL, data, address, ".education-entry");
         }
 
         education.onlineCourses.forEach(function(online) {
