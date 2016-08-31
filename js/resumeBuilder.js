@@ -119,7 +119,7 @@ var education = {
         "name": "Binus University",
         "location": "Jakarta, indonesia",
         "degree": "Bachelor",
-        "majors": "Infomation System",
+        "majors": ["Infomation System"],
         "dates": "2016",
         "url": "http://binus.ac.id",
     }, ],
