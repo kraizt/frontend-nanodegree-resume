@@ -112,7 +112,7 @@ var education = {
         "name": "Telkom University",
         "location": "Bandung, indonesia",
         "degree": "Diploma",
-        "major": ["Computer Engineering"],
+        "majors": ["Computer Engineering"],
         "dates": "2013",
         "url": "http://telkomuniversity.ac.id/"
     }, {
